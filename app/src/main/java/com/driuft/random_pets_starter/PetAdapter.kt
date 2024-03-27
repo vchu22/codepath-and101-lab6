@@ -1,5 +1,6 @@
 package com.driuft.random_pets_starter
 
+import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
@@ -18,14 +19,15 @@ class PetAdapter : RecyclerView.Adapter<PetAdapter.ViewHolder>() {
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): ViewHolder {
-        TODO("Not yet implemented")
+        val view = LayoutInflater.from(p0.context)
+            .inflate(R.layout.pet_item, p0, false)
+
+        return ViewHolder(view)
     }
 
-    override fun getItemCount(): Int {
-        TODO("Not yet implemented")
-    }
+    override fun getItemCount() = petList.size
 
     override fun onBindViewHolder(p0: ViewHolder, p1: Int) {
-        TODO("Not yet implemented")
+        TODO("Get element from your dataset at this position and replace the contents of the view with that element")
     }
 }
