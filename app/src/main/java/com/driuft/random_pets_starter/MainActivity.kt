@@ -11,11 +11,14 @@ import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler
 import okhttp3.Headers
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var petList : MutableList<String>
+    private lateinit var rvPets : RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
+        rvPets = findViewById((R.id.pet_list))
+        petList = mutableListOf()
         getDogImageURL()
     }
 
