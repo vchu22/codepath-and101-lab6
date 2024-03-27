@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
     private fun getDogImageURL() {
         val client = AsyncHttpClient()
 
-        client["https://dog.ceo/api/breeds/image/random", object : JsonHttpResponseHandler() {
+        client["https://dog.ceo/api/breeds/image/random/20", object : JsonHttpResponseHandler() {
             override fun onSuccess(statusCode: Int, headers: Headers, json: JsonHttpResponseHandler.JSON) {
                 Log.d("Dog Success", "$json")
             }
