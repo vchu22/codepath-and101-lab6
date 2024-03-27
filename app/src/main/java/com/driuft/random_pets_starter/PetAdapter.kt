@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 
-class PetAdapter : RecyclerView.Adapter<PetAdapter.ViewHolder>() {
+class PetAdapter(petList: MutableList<String>) : RecyclerView.Adapter<PetAdapter.ViewHolder>() {
     private val petList: List<String> = TODO()
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
