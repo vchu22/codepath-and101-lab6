@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 
 class PetAdapter(petList: MutableList<String>) : RecyclerView.Adapter<PetAdapter.ViewHolder>() {
-    private val petList: List<String> = TODO()
+    private val petList: List<String> = petList
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val petImage: ImageView
