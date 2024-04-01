@@ -3,6 +3,7 @@ package com.driuft.random_pets_starter
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.codepath.asynchttpclient.AsyncHttpClient
@@ -34,6 +35,7 @@ class MainActivity : AppCompatActivity() {
                 val adapter = PetAdapter(petList)
                 rvPets.adapter = adapter
                 rvPets.layoutManager = LinearLayoutManager(this@MainActivity)
+                rvPets.addItemDecoration(DividerItemDecoration(this@MainActivity, LinearLayoutManager.VERTICAL))
             }
 
             override fun onFailure(
